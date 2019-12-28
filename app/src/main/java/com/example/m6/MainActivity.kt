@@ -23,6 +23,11 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    fun pozdravKundicko(view: View) {
+        Toast.makeText(this,"Jeste jednou cus kundicko",Toast.LENGTH_LONG).show()
+
+    }
+
     fun interval(view: View){
         val intrvl = (1..12).random()
         // print(intrvl)
