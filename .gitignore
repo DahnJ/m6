@@ -27,7 +27,7 @@ local.properties
 
 
 # IntelliJ / Android Studio - related
-.idea/workspace.iml
+.idea/workspace.xml
 
 ### Gradle-related (taken from https://medium.com/@petehouston/typical-gitignore-for-a-gradle-java-project-52cbe079a99c)
 .gradle
