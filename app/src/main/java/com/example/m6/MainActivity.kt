@@ -4,9 +4,7 @@ package com.example.m6
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import android.media.MediaPlayer
-import android.widget.LinearLayout
 import android.widget.TextView
 import kotlin.math.abs
 
@@ -20,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     private var question = 0
     private var answer = 0
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -30,7 +29,9 @@ class MainActivity : AppCompatActivity() {
         val intervalSemitones = INTERVALS.random()
 
         playPitch(chosenPitch)
-        Toast.makeText(this, parseIntervalName(intervalSemitones), Toast.LENGTH_LONG).show()
+        val textview = findViewById<TextView>(R.id.intervalTextView)
+        textview.text = parseIntervalName(intervalSemitones)
+
         question = chosenPitch
         answer = chosenPitch + intervalSemitones
     }
