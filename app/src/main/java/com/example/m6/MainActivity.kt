@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     private val PITCHES = (0..11)
     //val map = mapOf("m2" to 1, "M2" to 2, "m3" to 3, "M3" to 4, "P4" to 5, "d5" to 6, "P5" to 7, "m6" to 8, "M6" to 9, "m7" to 10, "M7" to 11, "P8" to 12)
 
+    private var question = 0
     private var answer = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,11 +31,16 @@ class MainActivity : AppCompatActivity() {
 
         playPitch(chosenPitch)
         Toast.makeText(this, parseIntervalName(intervalSemitones), Toast.LENGTH_LONG).show()
+        question = chosenPitch
         answer = chosenPitch + intervalSemitones
     }
 
     fun answerButton(view: View){
         playPitch(answer)
+    }
+
+    fun repeatButton(view: View){
+        playPitch(question)
     }
 
     private fun parseIntervalName(interval: Int): String{
