@@ -26,6 +26,9 @@ hs_err_pid*
 local.properties
 
 
+# IntelliJ / Android Studio - related
+.idea/workspace.iml
+
 ### Gradle-related (taken from https://medium.com/@petehouston/typical-gitignore-for-a-gradle-java-project-52cbe079a99c)
 .gradle
 /build/
