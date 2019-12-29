@@ -5,4 +5,5 @@
     <string name="jezisek">JESUS TAKE THE WHEEL</string>
     <string name="popisUkolu">Zazpivej si tento interval kundicko:</string>
     <string name="randomInterval"></string>
+    <string name="answerButtonString">Play the answer</string>
 </resources>
