@@ -30,14 +30,14 @@ class MainActivity : AppCompatActivity() {
         val chosenOne = intervalsList[intrvl]
         val chosenPitch = (0..11).random()
 
-        val chosenPitch = (30..50).random()
         playSound(chosenPitch)
         Toast.makeText(this,chosenOne, Toast.LENGTH_LONG).show()
     }
 
 
-    fun playSound(pitch: Int) {
-        val filename = "p$pitch"
+    private fun playSound(pitch: Int) {
+        val normalizedPitch = 20 + (pitch % 12) // 20 is C
+        val filename = "p$normalizedPitch"
         val resourceId = resources.getIdentifier(filename, "raw", this.applicationInfo.packageName)
 
         val mediaPlayer: MediaPlayer? = MediaPlayer.create(this.applicationContext, resourceId)
